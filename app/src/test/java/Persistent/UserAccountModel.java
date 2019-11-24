@@ -26,7 +26,6 @@ public class UserAccountModel {
         Jacky.setPassword("test1234");
     }
 
-
     public static class UserAccount{
         private String userName;
         private String userId;
@@ -94,5 +93,12 @@ public class UserAccountModel {
 
     }
 
+    public UserAccount getIsabelle(){
+        return Isabelle;
+    }
+
+    public UserAccount getJacky(){
+        return Jacky;
+    }
 
 }
