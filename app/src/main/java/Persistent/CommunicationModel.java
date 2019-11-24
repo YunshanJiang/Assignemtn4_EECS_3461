@@ -21,20 +21,9 @@ public class CommunicationModel {
         responseMap.put("(game)", "I found all the gold bars! thanks Isabelle!");
         responseMap.put("(see).(you)", "See you! bye!");
     }
-    private static final String defaultMessageFromBot = "I am sorry.. I don't know what you mean...";
+    public static final String defaultMessageFromBot = "I am sorry.. I don't know what you mean...";
 
-    public String getResponse(String userInput){
-        for(String keyReg: responseMap.keySet()){
-            Pattern p = Pattern.compile(keyReg);
-            Matcher m = p.matcher(userInput);
-
-            if(m.find())
-                return responseMap.get(keyReg);
-        }
-        return defaultMessageFromBot;
-    }
-
-    public static HashMap<String, String> getResponseMap() {
+    public HashMap<String, String> getResponseMap() {
         return responseMap;
     }
 }

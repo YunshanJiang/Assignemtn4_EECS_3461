@@ -1,12 +1,11 @@
 import Persistent.CommunicationModel;
 import Persistent.UserAccountModel;
 
-import org.junit.Ignore;
+
 import org.junit.Test;
 
 public class ModelTest {
 
-    @Ignore
     @Test
     public void communicationModelRetrievingTest(){
         System.out.println("=========================== test name ===========================");
@@ -26,11 +25,10 @@ public class ModelTest {
         System.out.println("=========================== test end ===========================");
     }
 
-    @Ignore
     @Test
     public void userAccountRetrievingTest(){
         System.out.println("=========================== test name ===========================");
-        System.out.println("communicationModelRetrievingTest");
+        System.out.println("userAccountRetrievingTest");
         System.out.println("=========================== test start ===========================");
         UserAccountModel uam = new UserAccountModel();
         UserAccountModel.UserAccount isabelle = uam.getIsabelle();
