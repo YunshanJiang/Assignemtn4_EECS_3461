@@ -1,8 +1,6 @@
-import com.example.a4chatapp.CommunicationModel;
+import Persistent.CommunicationModel;
 
 import org.junit.Test;
-
-import java.util.HashMap;
 
 public class ModelTest {
     @Test
