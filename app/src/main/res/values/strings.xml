@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">A4ChatApp</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_pic_video_upload_button_samepl">PicVideoUploadButtonSamepl</string>
+    <string name="title_activity_pic_up">PicUpActivity</string>
 </resources>

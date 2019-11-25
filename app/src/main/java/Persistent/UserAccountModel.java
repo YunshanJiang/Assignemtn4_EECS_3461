@@ -1,10 +1,17 @@
 package Persistent;
 
+import java.util.HashMap;
+
 public class UserAccountModel {
 
-    private static UserAccount Isabelle;
-    static{
-        Isabelle = new UserAccount();
+    private static HashMap<String, UserAccount> userMap;
+    static {
+        userMap = new HashMap<String, UserAccount>();
+        UserAccount Isabelle = new UserAccount();
+        UserAccount Jacky = new UserAccount();
+        userMap.put("isabelle", Isabelle);
+        userMap.put("jacky", Jacky);
+
         Isabelle.setAddress("121 McMahon Drive, Toronto, Ontario, Canada M2K0C1");
         Isabelle.setEmail("ckgs0942@gmail.com");
         Isabelle.setIntroduction("Red Dead Remption 2 / Call of Duty");
@@ -12,11 +19,7 @@ public class UserAccountModel {
         Isabelle.setStatus("online");
         Isabelle.setUserId("isabelle");
         Isabelle.setUserName("Isabelle");
-    }
 
-    private static UserAccount Jacky;
-    static{
-        Jacky = new UserAccount();
         Jacky.setAddress("123 York University, North YOork, Ontario, Canada");
         Jacky.setEmail("jacky@gmail.com");
         Jacky.setUserName("jacky");
@@ -24,6 +27,7 @@ public class UserAccountModel {
         Jacky.setStatus("online");
         Jacky.setIntroduction("Red Dead RE2 / Zelda BoW");
         Jacky.setPassword("test1234");
+
     }
 
     public static class UserAccount{
@@ -93,12 +97,8 @@ public class UserAccountModel {
 
     }
 
-    public UserAccount getIsabelle(){
-        return Isabelle;
-    }
-
-    public UserAccount getJacky(){
-        return Jacky;
+    public static HashMap<String, UserAccount> getUserMap() {
+        return userMap;
     }
 
 }

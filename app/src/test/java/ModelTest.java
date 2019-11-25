@@ -1,5 +1,7 @@
 import Persistent.CommunicationModel;
 import Persistent.UserAccountModel;
+import Service.CommunicationServiceImpl;
+import Service.UserAccountServiceImpl;
 
 
 import org.junit.Test;
@@ -11,7 +13,7 @@ public class ModelTest {
         System.out.println("=========================== test name ===========================");
         System.out.println("communicationModelRetrievingTest");
         System.out.println("=========================== test start ===========================");
-        CommunicationModel communicationModel = new CommunicationModel();
+        CommunicationServiceImpl communicationModel = new CommunicationServiceImpl();
         System.out.println("hi!\n" + communicationModel.getResponse("hi?"));
         System.out.println("how are you?\n" + communicationModel.getResponse("how are you?"));
         System.out.println("I have some information for gold bar.\n" + communicationModel.getResponse("I have some info for gold bar"));
@@ -30,9 +32,9 @@ public class ModelTest {
         System.out.println("=========================== test name ===========================");
         System.out.println("userAccountRetrievingTest");
         System.out.println("=========================== test start ===========================");
-        UserAccountModel uam = new UserAccountModel();
-        UserAccountModel.UserAccount isabelle = uam.getIsabelle();
-        UserAccountModel.UserAccount jacky = uam.getJacky();
+        UserAccountServiceImpl uam = new UserAccountServiceImpl();
+        UserAccountModel.UserAccount isabelle = uam.retrieveUserAccountByUserId("isabelle");
+        UserAccountModel.UserAccount jacky = uam.retrieveUserAccountByUserId("jacky");
         System.out.println(isabelle.getAddress() + ", " + isabelle.getEmail()+ ", " + isabelle.getUserName());
         System.out.println(jacky.getAddress() + ", " + jacky.getEmail()+ ", " + jacky.getUserName());
         System.out.println("=========================== test end ===========================");
