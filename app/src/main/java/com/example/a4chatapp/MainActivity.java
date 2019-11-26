@@ -1,5 +1,6 @@
 package com.example.a4chatapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -21,6 +22,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        loginButton = (Button) findViewById(R.id.button);
+        CreateAccountButton = (Button)findViewById(R.id.button2);
+        CreateAccountButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                CreateAccountActivity();
+            }
+        });
     }
-
+private void CreateAccountActivity(){
+    Intent intent = new Intent(this, NewAccountActivity.class);
+    startActivity(intent);
+ }
 }
