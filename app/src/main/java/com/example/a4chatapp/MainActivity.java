@@ -44,5 +44,6 @@ private void CreateAccountActivity(){
     private void CreateMessageActivity(){
         Intent intent = new Intent(this, MessageActivity.class);
         startActivity(intent);
+        finish();
     }
 }
