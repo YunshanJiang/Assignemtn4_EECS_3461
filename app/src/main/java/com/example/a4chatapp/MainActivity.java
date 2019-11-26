@@ -12,7 +12,14 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import Persistent.UserAccountModel;
+import Service.CommunicationServiceImpl;
+import Service.UserAccountServiceImpl;
+
 public class MainActivity extends AppCompatActivity {
+
+    private static UserAccountServiceImpl userAccountServiceimpl = new UserAccountServiceImpl();
+    private static CommunicationServiceImpl communicationServiceImpl = new CommunicationServiceImpl();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +36,24 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    /**
+     * When the user id is used as parameter (e.g., "isabelle"), it returns its relevant user information
+     * @param userId
+     * @return UserAccount
+     */
+     private UserAccountModel.UserAccount getUserInformationById(String userId){
+        return userAccountServiceimpl.retrieveUserAccountByUserId(userId);
+    }
+
+    /**
+     * When the app user's message is used as parameter (e.g., 'how are you?'), it returns the virtual user's response
+     * @param message
+     * @return String
+     */
+    private String getResponseFromtheBotByUserMessage(String message){
+        return communicationServiceImpl.getResponse(message);
     }
 
     @Override
