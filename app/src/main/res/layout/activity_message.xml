@@ -6,4 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".MessageActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:theme="?attr/actionBarTheme"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.viewpager.widget.ViewPager android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/pager"
+        tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
