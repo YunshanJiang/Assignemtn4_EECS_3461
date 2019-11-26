@@ -30,9 +30,19 @@ public class MainActivity extends AppCompatActivity {
                 CreateAccountActivity();
             }
         });
+        loginButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                CreateMessageActivity();
+            }
+        });
     }
 private void CreateAccountActivity(){
-    Intent intent = new Intent(this, NewAccountActivity.class);
-    startActivity(intent);
- }
+        Intent intent = new Intent(this, NewAccountActivity.class);
+        startActivity(intent);
+    }
+    private void CreateMessageActivity(){
+        Intent intent = new Intent(this, MessageActivity.class);
+        startActivity(intent);
+    }
 }
