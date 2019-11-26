@@ -23,4 +23,6 @@ public class SlidePagerAdapter extends FragmentStatePagerAdapter {
     public int getCount() {
         return fragmentList.size();
     }
+
+
 }
