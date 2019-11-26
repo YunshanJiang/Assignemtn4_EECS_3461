@@ -4,8 +4,9 @@ import java.util.HashMap;
 
 public class UserAccountModel {
 
-    private static HashMap<String, UserAccount> userMap;
-    static {
+    private HashMap<String, UserAccount> userMap;
+    
+    public UserAccountModel() {
         userMap = new HashMap<String, UserAccount>();
         UserAccount Isabelle = new UserAccount();
         UserAccount Jacky = new UserAccount();
@@ -30,7 +31,7 @@ public class UserAccountModel {
 
     }
 
-    public static class UserAccount{
+    public class UserAccount{
         private String userName;
         private String userId;
         private String password;
@@ -97,7 +98,7 @@ public class UserAccountModel {
 
     }
 
-    public static HashMap<String, UserAccount> getUserMap() {
+    public HashMap<String, UserAccount> getUserMap() {
         return userMap;
     }
 
