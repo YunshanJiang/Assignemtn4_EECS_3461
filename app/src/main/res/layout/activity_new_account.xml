@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="horizontal"
+    tools:context=".NewAccountActivity">
 
     <RelativeLayout
         android:layout_width="0dip"
         android:layout_height="match_parent"
-        android:layout_weight="0.3">
-</RelativeLayout>
+        android:layout_weight="0.3"></RelativeLayout>
+
     <RelativeLayout
         android:layout_width="0dip"
         android:layout_height="match_parent"
@@ -23,47 +24,51 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:text="Hello" />
+                android:text="TextView" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/editText4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0"
+                android:ems="0"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/editText5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="0"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/editText6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:ems="0"
                 android:inputType="textPersonName"
                 android:text="Name" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/editText7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:ems="10"
+                android:ems="0"
                 android:inputType="textPassword" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/button3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0"
                 android:text="Button" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:text="Button" />
-        </LinearLayout>>
+        </LinearLayout>
+        >
     </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="0dip"
         android:layout_height="match_parent"
-        android:layout_weight="0.3">
-    </RelativeLayout>
+        android:layout_weight="0.3"></RelativeLayout>
 </LinearLayout>
