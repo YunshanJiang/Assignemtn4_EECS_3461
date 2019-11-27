@@ -4,8 +4,54 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/labelUserName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="profilepage" />
+        android:text="userName" />
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="empty" />
+
+    <TextView
+        android:id="@+id/labelUserId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="userId" />
+    <TextView
+        android:id="@+id/userId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="empty" />
+    <TextView
+        android:id="@+id/labelEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="email" />
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="empty" />
+    <TextView
+        android:id="@+id/labelAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="address" />
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="empty" />
+    <TextView
+        android:id="@+id/labelStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="status" />
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="empty" />
 </LinearLayout>
