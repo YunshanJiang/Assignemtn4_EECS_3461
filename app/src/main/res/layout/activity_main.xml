@@ -27,23 +27,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:text="Hello" />
+                android:textAlignment="center"
+                android:text="WELCOME TO GAMERS CHAT" />
+
+            <TextView
+                android:id="@+id/validationMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:textColor="#FF3333"
+                android:text="" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/userId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
                 android:ems="0"
                 android:inputType="textPersonName"
-                android:text="Name" />
+                android:hint="user id" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
                 android:ems="10"
+                android:hint="password"
                 android:inputType="textPassword" />
 
             <Button
@@ -51,14 +61,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:text="Button" />
+                android:text="Sign In" />
 
             <Button
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:text="Button" />
+                android:text="Sign Up" />
         </LinearLayout>>
     </RelativeLayout>
     <RelativeLayout
