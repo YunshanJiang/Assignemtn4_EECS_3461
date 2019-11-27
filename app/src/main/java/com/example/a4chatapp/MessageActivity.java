@@ -18,6 +18,10 @@ import com.example.a4chatapp.fragments.pageFragment4;
 import java.util.ArrayList;
 import java.util.List;
 
+import Persistent.UserAccountModel;
+import Service.CommunicationServiceImpl;
+import Service.UserAccountServiceImpl;
+
 public class MessageActivity extends AppCompatActivity {
     private ViewPager pager;
     private PagerAdapter pagerAdapter;
@@ -82,4 +86,14 @@ public class MessageActivity extends AppCompatActivity {
         }
         return false;
     }
+
+    private CommunicationServiceImpl csi = new CommunicationServiceImpl();
+    private UserAccountServiceImpl usi = new UserAccountServiceImpl();
+    private String getResposeFromBot(String userMessage){
+        return csi.getResponse(userMessage);
+    }
+    private UserAccountModel.UserAccount getUserInformationById(String userId){
+        return usi.retrieveUserAccountByUserId(userId);
+    }
+
 }
