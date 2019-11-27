@@ -5,7 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,6 +19,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     Context mCotext;
     List<FriendListItem> mData;
 
+
     public  RecyclerViewAdapter(Context mContext, List<FriendListItem> mData){
         this.mCotext = mContext;
         this.mData = mData;
@@ -27,7 +30,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v;
         v = LayoutInflater.from(mCotext).inflate(R.layout.item_contect, parent,false);
-        MyViewHolder viewHolder = new MyViewHolder(v);
+        final MyViewHolder viewHolder = new MyViewHolder(v);
+        viewHolder.item_contact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(mCotext, "test click" + String.valueOf(viewHolder.getAdapterPosition()), Toast.LENGTH_SHORT).show();
+            }
+        });
         return viewHolder;
     }
 
@@ -44,12 +53,13 @@ holder.img.setImageResource(mData.get(position).getPhoto());
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
+        private LinearLayout item_contact;
         private TextView tv_name;
         private ImageView img;
 
         public  MyViewHolder(View itemView){
             super(itemView);
-
+            item_contact = (LinearLayout) itemView.findViewById(R.id.friend_contect);
             tv_name = (TextView) itemView.findViewById(R.id.name_contact);
             img = (ImageView) itemView.findViewById(R.id.img_contect);
         }
