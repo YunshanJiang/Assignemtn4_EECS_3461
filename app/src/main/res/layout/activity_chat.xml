@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6e6e6"
+    tools:context=".ChatActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bar_layout">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chatToorbar">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="25dp"
+                android:text="asdasda"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:id="@+id/userIdInChat"></TextView>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/recycler_view_chat"
+        android:layout_below="@id/bar_layout"
+        android:layout_above="@+id/textinutbot"/>
+
+    <RelativeLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="#fff"
+        android:padding="5dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/textinutbot">
+        <EditText android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_send"
+            android:background="@android:color/transparent"
+            android:hint="type message..."
+            android:layout_centerVertical="true"/>
+    <ImageButton android:layout_height="40dp"
+        android:layout_width="40dp"
+        android:id="@+id/btn_send"
+        android:background="@drawable/ic_action_name"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</RelativeLayout>

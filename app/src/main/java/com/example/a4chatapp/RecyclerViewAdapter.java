@@ -1,6 +1,7 @@
 package com.example.a4chatapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +35,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         viewHolder.item_contact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(mCotext, "test click" + String.valueOf(viewHolder.getAdapterPosition()), Toast.LENGTH_SHORT).show();
+
             }
         });
         return viewHolder;
@@ -42,9 +43,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        final FriendListItem friendListItem = mData.get(position);
 holder.tv_name.setText(mData.get(position).getName());
 holder.img.setImageResource(mData.get(position).getPhoto());
-
+holder.itemView.setOnClickListener(new View.OnClickListener(){
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent(mCotext, ChatActivity.class);
+        intent.putExtra("username", friendListItem.getName());
+        mCotext.startActivity(intent);
+    }
+});
     }
 
     @Override
