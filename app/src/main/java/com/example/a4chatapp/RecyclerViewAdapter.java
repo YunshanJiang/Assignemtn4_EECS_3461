@@ -44,9 +44,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         final FriendListItem friendListItem = mData.get(position);
-holder.tv_name.setText(mData.get(position).getName());
-holder.img.setImageResource(mData.get(position).getPhoto());
-holder.itemView.setOnClickListener(new View.OnClickListener(){
+     holder.tv_name.setText(mData.get(position).getName());
+        holder.img.setImageResource(mData.get(position).getPhoto());
+        holder.itemView.setOnClickListener(new View.OnClickListener(){
     @Override
     public void onClick(View view) {
         Intent intent = new Intent(mCotext, ChatActivity.class);
@@ -61,10 +61,10 @@ holder.itemView.setOnClickListener(new View.OnClickListener(){
         return mData.size();
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
-        private LinearLayout item_contact;
-        private TextView tv_name;
-        private ImageView img;
+    public  class MyViewHolder extends RecyclerView.ViewHolder{
+        public LinearLayout item_contact;
+        public TextView tv_name;
+        public ImageView img;
 
         public  MyViewHolder(View itemView){
             super(itemView);
