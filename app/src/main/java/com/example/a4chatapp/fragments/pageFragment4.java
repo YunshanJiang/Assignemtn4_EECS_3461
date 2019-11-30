@@ -26,7 +26,7 @@ import Service.UserAccountServiceImpl;
 public class pageFragment4 extends Fragment {
     private UserAccountServiceImpl uas = new UserAccountServiceImpl();
     private UserAccountModel.UserAccount userAccount;
-
+    private Button logoutButton;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -60,5 +60,17 @@ public class pageFragment4 extends Fragment {
         userAccount = uas.retrieveUserAccountByUserId(userId);
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        logoutButton = (Button) getView().findViewById(R.id.logout_button);
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), MainActivity.class);
+                startActivity(intent);
 
+            }
+        });
+    }
 }

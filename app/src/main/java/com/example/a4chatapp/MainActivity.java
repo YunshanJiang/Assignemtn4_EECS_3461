@@ -3,6 +3,7 @@ package com.example.a4chatapp;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -61,6 +62,21 @@ public class MainActivity extends AppCompatActivity {
         UserAccountModel.UserAccount ua = userAccountServiceImpl.retrieveUserAccountByUserId(userId);
         if(ua != null && password.equals(ua.getPassword())){
             return true;
+        }
+        return false;
+    }
+
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)
+    {
+        switch(keyCode)
+        {
+            case KeyEvent.KEYCODE_BACK:
+
+                moveTaskToBack(true);
+
+                return true;
         }
         return false;
     }
