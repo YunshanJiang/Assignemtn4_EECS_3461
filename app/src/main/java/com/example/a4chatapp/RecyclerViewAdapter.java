@@ -51,6 +51,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onClick(View view) {
         Intent intent = new Intent(mCotext, ChatActivity.class);
         intent.putExtra("username", friendListItem.getName());
+        intent.putExtra("img", friendListItem.getPhoto());
+
         mCotext.startActivity(intent);
     }
 });

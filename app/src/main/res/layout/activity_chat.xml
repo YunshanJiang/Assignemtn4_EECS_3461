@@ -34,7 +34,8 @@
         android:layout_width="match_parent"
         android:id="@+id/recycler_view_chat"
         android:layout_below="@id/bar_layout"
-        android:layout_above="@+id/textinutbot"/>
+        android:layout_above="@+id/textinutbot"
+        />
 
     <RelativeLayout android:layout_height="wrap_content"
         android:layout_width="match_parent"

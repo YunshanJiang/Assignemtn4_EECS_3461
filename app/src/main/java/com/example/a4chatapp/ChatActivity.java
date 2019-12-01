@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.PersistableBundle;
 import android.util.AttributeSet;
 import android.view.View;
@@ -48,12 +49,10 @@ public class ChatActivity extends AppCompatActivity {
             }
         });
         mchat = new ArrayList<>();
-        mchat.add(new Chat("a", "a", "hellod"));
-
         recyclerView = findViewById(R.id.recycler_view_chat);
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
-        linearLayoutManager.setStackFromEnd(true);
+        //linearLayoutManager.setStackFromEnd(true);
         recyclerView.setLayoutManager(linearLayoutManager);
         messageAdapter = new MessageAdapter(ChatActivity.this, mchat);
         recyclerView.setAdapter(messageAdapter);
@@ -61,7 +60,8 @@ public class ChatActivity extends AppCompatActivity {
         btn_send = findViewById(R.id.btn_send);
         text_send = findViewById(R.id.text_send);
         intent = getIntent();
-        String userid = intent.getStringExtra("username");
+        final String userid = intent.getStringExtra("username");
+        final int imgid = intent.getIntExtra("img", 0);
         username.setText(userid);
 
 
@@ -71,11 +71,29 @@ public class ChatActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String msg = text_send.getText().toString();
                 if (!msg.equals("")){
-                mchat.add(new Chat("a", "a", msg));
+                mchat.add(new Chat("a", "", msg, 0));
                     messageAdapter = new MessageAdapter(ChatActivity.this, mchat);
                     recyclerView.setAdapter(messageAdapter);
                 }
                 text_send.setText("");
+
+                new CountDownTimer(3000, 1000){
+                    @Override
+                    public void onTick(long l) {
+
+                    }
+
+                    @Override
+                    public void onFinish() {
+
+                        mchat.add(new Chat("", userid, "cxczcx", imgid));
+                      //  messageAdapter = new MessageAdapter(ChatActivity.this, mchat);
+
+                        messageAdapter.notifyDataSetChanged();
+                        //recyclerView.setAdapter(messageAdapter);
+
+                    }
+                }.start();
             }
         });
     }

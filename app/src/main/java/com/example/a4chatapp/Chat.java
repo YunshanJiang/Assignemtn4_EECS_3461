@@ -6,10 +6,14 @@ public class Chat {
     private String receiver;
     private String message;
 
-    public Chat(String sender, String receiver, String message) {
+
+
+    private int imgid;
+    public Chat(String sender, String receiver, String message, int imgid) {
         this.sender = sender;
         this.receiver = receiver;
         this.message = message;
+        this.imgid = imgid;
     }
     public  Chat(){
 
@@ -37,5 +41,12 @@ public class Chat {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+    public int getImgid() {
+        return imgid;
+    }
+
+    public void setImgid(int imgid) {
+        this.imgid = imgid;
     }
 }
