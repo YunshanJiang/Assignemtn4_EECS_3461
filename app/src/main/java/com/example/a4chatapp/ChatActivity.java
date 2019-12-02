@@ -19,13 +19,17 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import Service.CommunicationServiceImpl;
+
 
 public class ChatActivity extends AppCompatActivity {
+
+    CommunicationServiceImpl csi = new CommunicationServiceImpl();
     TextView username;
 
     ImageButton btn_send;
     EditText text_send;
-
+    String tempBotMsg;
     MessageAdapter messageAdapter;
     List<Chat> mchat;
 
@@ -75,7 +79,9 @@ public class ChatActivity extends AppCompatActivity {
                     messageAdapter = new MessageAdapter(ChatActivity.this, mchat);
                     recyclerView.setAdapter(messageAdapter);
                 }
+                String userInput = new String(text_send.getText().toString());
                 text_send.setText("");
+                tempBotMsg = csi.getResponse(userInput);
 
                 new CountDownTimer(3000, 1000){
                     @Override
@@ -85,13 +91,10 @@ public class ChatActivity extends AppCompatActivity {
 
                     @Override
                     public void onFinish() {
-
-                        mchat.add(new Chat("", userid, "cxczcx", imgid));
                       //  messageAdapter = new MessageAdapter(ChatActivity.this, mchat);
-
+                        mchat.add(new Chat("", userid, tempBotMsg, imgid));
                         messageAdapter.notifyDataSetChanged();
                         //recyclerView.setAdapter(messageAdapter);
-
                     }
                 }.start();
             }
