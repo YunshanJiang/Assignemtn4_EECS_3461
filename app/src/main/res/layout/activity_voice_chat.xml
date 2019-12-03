@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VoiceChatActivity"
+    android:id="@+id/chatroom_layout">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bar_layout">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/chatToorbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="16dp">
+
+                <TextView
+                    android:id="@+id/userIdInChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="Chat"
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    android:textStyle="bold"></TextView>
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="10dp"
+    android:orientation="horizontal"
+    android:gravity="center">
+    <RelativeLayout android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2">
+    </RelativeLayout>
+    <LinearLayout android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="0.6"
+        android:gravity="center">
+        <LinearLayout android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="50dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_height="80dp"
+                android:layout_width="80dp"
+                android:src="@drawable/esabelle"
+                />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Isabelle"
+                    />
+
+            </LinearLayout>
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_height="80dp"
+                    android:layout_width="80dp"
+                    android:src="@drawable/esabelle"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Isabelle"
+                    />
+            </LinearLayout>
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="50dp">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_height="80dp"
+                    android:layout_width="80dp"
+                    android:src="@drawable/esabelle"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Isabelle"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="1:31"
+            android:textSize="20dp"/>
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="York fam"
+            android:textSize="30dp"/>
+        <RelativeLayout android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp">
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_height="50dp"
+                    android:layout_width="50dp"
+                    android:src="@drawable/ic_action_speaker"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Speaker"
+                    />
+            </LinearLayout>
+            <LinearLayout android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:src="@drawable/ic_action_mute"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Mute"
+                />
+        </LinearLayout>
+        </RelativeLayout>
+        <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Leave Call"
+            android:layout_marginTop="50dp"
+            android:id="@+id/leavecallbutton"/>
+    </LinearLayout>
+    <RelativeLayout android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2">
+    </RelativeLayout>
+</LinearLayout>
+</RelativeLayout>

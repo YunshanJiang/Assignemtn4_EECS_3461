@@ -31,6 +31,8 @@ public class ChatActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
 
+    ImageButton call_button;
+
     Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +61,7 @@ public class ChatActivity extends AppCompatActivity {
         username = findViewById(R.id.userIdInChat);
         btn_send = findViewById(R.id.btn_send);
         text_send = findViewById(R.id.text_send);
+        call_button = (ImageButton) findViewById(R.id.call_button);
         intent = getIntent();
         final String userid = intent.getStringExtra("username");
         final int imgid = intent.getIntExtra("img", 0);
@@ -96,8 +99,20 @@ public class ChatActivity extends AppCompatActivity {
                 }.start();
             }
         });
-    }
 
+
+
+        call_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startVoiceChat();
+            }
+        });
+    }
+    private void startVoiceChat(){
+        Intent intent = new Intent(this, VoiceChatActivity.class);
+        startActivity(intent);
+    }
     @Override
     public View onCreateView(String name, Context context, AttributeSet attrs) {
         return super.onCreateView(name, context, attrs);
