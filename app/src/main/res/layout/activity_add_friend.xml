@@ -1,9 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddFriendActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bar_layout">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/chatToorbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+            <RelativeLayout android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_marginRight="16dp"
+                >
+
+                <TextView
+                    android:id="@+id/userIdInChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="New Contact"
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="Save"
+                    android:textSize="20dp"
+
+                    android:id="@+id/add_friend_button"/>
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar_layout"
+        android:layout_margin="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:id="@+id/name_photo_add_icon">
+
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/ic_action_add_profile_image"
+                android:src="@android:drawable/screen_background_dark_transparent" />
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="30dp"
+                >
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Company/School" />
+            </LinearLayout>
+        </LinearLayout>
+        <EditText android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/name_photo_add_icon"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Phone"
+            android:id="@+id/add_phone"
+            android:layout_marginTop="20dp"/>
+        <EditText android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/add_phone"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Email"
+            android:layout_marginTop="20dp"
+            android:id="@+id/add_email"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/add_email"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Note"
+            android:textColor="#AB696969" />
+    </RelativeLayout>
+
+</RelativeLayout>
