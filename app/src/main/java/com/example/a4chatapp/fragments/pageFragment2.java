@@ -43,12 +43,12 @@ public class pageFragment2 extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         friendListItems = new ArrayList<>();
-        friendListItems.add(new FriendListItem("Isabelle", R.drawable.esabelle));
-        friendListItems.add(new FriendListItem("Isabelle", R.drawable.esabelle));
-        friendListItems.add(new FriendListItem("Isabelle", R.drawable.esabelle));
-        friendListItems.add(new FriendListItem("Isabelle", R.drawable.esabelle));
-        friendListItems.add(new FriendListItem("Isabelle", R.drawable.esabelle));
-        friendListItems.add(new FriendListItem("Isabelle", R.drawable.esabelle));
+        friendListItems.add(new FriendListItem("Isabelle", R.drawable.esabelle, 1));
+        friendListItems.add(new FriendListItem("Isabelle", R.drawable.esabelle,2));
+        friendListItems.add(new FriendListItem("Isabelle", R.drawable.esabelle,3));
+        friendListItems.add(new FriendListItem("Isabelle", R.drawable.esabelle,4));
+        friendListItems.add(new FriendListItem("Isabelle", R.drawable.esabelle,5));
+        friendListItems.add(new FriendListItem("Isabelle", R.drawable.esabelle,6));
 
     }
 }

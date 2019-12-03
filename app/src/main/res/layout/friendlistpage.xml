@@ -29,11 +29,11 @@
 
         <ImageButton
             android:id="@+id/imageButton5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
 
             android:layout_alignParentRight="true"
-            app:srcCompat="@android:drawable/btn_dialog" />
+            android:background="@drawable/ic_action_add_people" />
     </RelativeLayout>
 
 

@@ -4,12 +4,17 @@ public class FriendListItem {
 
     private String name;
     private int photo;
+
+
+
+    private int roomID;
     public FriendListItem(){
 
     }
-    public FriendListItem(String name, int photo){
+    public FriendListItem(String name, int photo, int roomID){
         this.name = name;
         this.photo = photo;
+        this.roomID = roomID;
     }
 
     public String getName(){
@@ -26,5 +31,14 @@ public class FriendListItem {
 
     public void setPhoto(int photo) {
         this.photo = photo;
+    }
+
+
+    public int getRoomID() {
+        return roomID;
+    }
+
+    public void setRoomID(int roomID) {
+        this.roomID = roomID;
     }
 }
