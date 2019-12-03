@@ -19,12 +19,15 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import Service.ActivityHistoryServiceImpl;
 import Service.CommunicationServiceImpl;
 
 
 public class ChatActivity extends AppCompatActivity {
 
     CommunicationServiceImpl csi = new CommunicationServiceImpl();
+    ActivityHistoryServiceImpl ahs = new ActivityHistoryServiceImpl();
+
     TextView username;
 
     ImageButton btn_send;
