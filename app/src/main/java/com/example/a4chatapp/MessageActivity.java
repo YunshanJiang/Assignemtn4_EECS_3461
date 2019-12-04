@@ -42,6 +42,7 @@ public class MessageActivity extends AppCompatActivity {
         pagerAdapter = new SlidePagerAdapter(getSupportFragmentManager(),list);
         pager.setAdapter(pagerAdapter);
         messageButton = (ImageButton)findViewById(R.id.imageButton);
+        //messageButton.setBackground(R.id.);
         friendListButton = (ImageButton)findViewById(R.id.imageButton2);
         activityButton = (ImageButton)findViewById(R.id.imageButton3);
         profileButton = (ImageButton)findViewById(R.id.imageButton4);

@@ -13,7 +13,7 @@
             android:id="@+id/toolbar2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
+            android:background="#5174A8"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme" />
 
@@ -23,9 +23,11 @@
             android:layout_height="wrap_content"
             android:layout_alignTop="@id/toolbar2"
             android:layout_alignParentTop="false"
-            android:layout_centerInParent="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
             android:text="Messages"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:textColor="#FFFFFF"/>
 
         <ImageButton
             android:id="@+id/imageButton5"
@@ -33,7 +35,7 @@
             android:layout_height="50dp"
             android:layout_alignRight="@id/toolbar2"
             android:layout_weight="0"
-            android:background="@drawable/addicon"/>
+            android:background="@drawable/component11"/>
     </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView

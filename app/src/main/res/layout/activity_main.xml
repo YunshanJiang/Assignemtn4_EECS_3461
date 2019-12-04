@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/group66">
 
     <RelativeLayout
         android:layout_width="0dip"
@@ -27,8 +28,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:textAlignment="center"
-                android:text="WELCOME TO GAMERS CHAT" />
+                android:text="Sign in"
+
+                android:textColor="#FFFFFF"
+                android:textSize="40dp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/validationMessage"
@@ -38,37 +42,51 @@
                 android:textColor="#FF3333"
                 android:text="" />
 
+         <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="40dp"
+             android:background="@drawable/button">
             <EditText
                 android:id="@+id/userId"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:ems="0"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
                 android:inputType="textPersonName"
-                android:hint="user id" />
-
+                android:hint="user id"
+                android:background="@android:color/transparent"/>
+    </RelativeLayout>
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/button"
+                android:layout_marginTop="10dp">
             <EditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:ems="10"
-                android:hint="password"
-                android:inputType="textPassword" />
+                android:layout_height="40dp"
+                android:layout_marginLeft="3dp"
 
+                android:hint="password"
+                android:inputType="textPassword"
+
+                android:background="@android:color/transparent"/>
+            </RelativeLayout>
             <Button
                 android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:text="Sign In" />
+                android:text="Sign In"
+                android:background="@drawable/button"
+                android:layout_marginTop="40dp"/>
 
             <Button
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:text="Sign Up" />
+                android:text="Sign Up"
+                android:background="@drawable/button"
+                android:layout_marginTop="10dp"
+                />
         </LinearLayout>>
     </RelativeLayout>
     <RelativeLayout

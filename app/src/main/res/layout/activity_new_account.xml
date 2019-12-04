@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context=".NewAccountActivity">
+    tools:context=".NewAccountActivity"
+    android:background="@drawable/group66">
 
     <RelativeLayout
         android:layout_width="0dip"
@@ -27,21 +28,29 @@
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Sign Up"
+                android:textColor="#FFFFFF"
+                android:textSize="40dp"
+                android:textStyle="bold"
+               />
 
             <EditText
                 android:id="@+id/editText4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="0"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:hint="Email"
+                android:layout_marginTop="40dp"/>
 
             <EditText
                 android:id="@+id/editText5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="0"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:hint="Confirm Email"
+                android:layout_marginTop="10dp"/>
 
             <EditText
                 android:id="@+id/editText6"
@@ -49,20 +58,25 @@
                 android:layout_height="wrap_content"
                 android:ems="0"
                 android:inputType="textPersonName"
-                android:text="Name" />
+                android:hint="Username"
+                android:layout_marginTop="10dp"/>
 
             <EditText
                 android:id="@+id/editText7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="0"
-                android:inputType="textPassword" />
+                android:layout_marginTop="10dp"
+                android:hint="Password"
+                android:inputType="textPassword"/>
 
             <Button
                 android:id="@+id/button3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="Sign Up"
+                android:background="@drawable/button"
+                android:layout_marginTop="40dp"/>
         </LinearLayout>
         >
     </RelativeLayout>

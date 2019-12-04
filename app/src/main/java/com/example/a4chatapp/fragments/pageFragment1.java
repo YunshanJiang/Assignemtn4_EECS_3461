@@ -57,8 +57,9 @@ public class pageFragment1 extends Fragment {
         super.onCreate(savedInstanceState);
 
         mMessage = new ArrayList<>();
-        mMessage.add(new FriendListItem("Isabelle", R.drawable.esabelle,1));
-        mMessage.add(new FriendListItem("Isabelle", R.drawable.esabelle,2));
-        mMessage.add(new FriendListItem("Isabelle", R.drawable.esabelle,3));
+        mMessage.add(new FriendListItem("York Fam", R.drawable.pp1,1,1));
+        mMessage.add(new FriendListItem("ck", R.drawable.pp3,2,1));
+        mMessage.add(new FriendListItem("jellymaca", R.drawable.pp2,3,2));
+        mMessage.add(new FriendListItem("Yunshan.J", R.drawable.pp4,4,0));
     }
 }

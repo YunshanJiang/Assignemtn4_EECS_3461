@@ -7,26 +7,23 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/toplayout">
+        android:id="@+id/toplayout"
+        android:background="#4478A7">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginEnd="0dp"
-            android:layout_marginRight="0dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+
             android:text="Profile"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:textAlignment="center"
-            android:textSize="25dp" />
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="1dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="50sp"
-            android:background="#a40404" />
+
+            android:textSize="25dp"
+            android:textColor="#FFFFFF"
+            />
+
 
 
 
@@ -161,6 +158,7 @@
             android:id="@+id/logout_button"
             android:layout_width="202dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/button2"
             android:text="Log out" />
     </LinearLayout>
 
