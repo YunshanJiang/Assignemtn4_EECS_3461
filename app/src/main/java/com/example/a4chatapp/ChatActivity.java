@@ -17,15 +17,29 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+
+import Persistent.Communication;
+import Service.ActivityHistoryServiceImpl;
+import Service.CommunicationServiceImpl;
 
 
 public class ChatActivity extends AppCompatActivity {
+
+    //grace data
+    private String userName = "Jacky";
+    private String userId = "jacky";
+    private int roomId = 1234;
+
+    CommunicationServiceImpl csi = new CommunicationServiceImpl();
+    ActivityHistoryServiceImpl ahs = new ActivityHistoryServiceImpl();
+
     TextView username;
 
     ImageButton btn_send;
     EditText text_send;
-
+    String tempBotMsg;
     MessageAdapter messageAdapter;
     List<Chat> mchat;
 
@@ -72,14 +86,23 @@ public class ChatActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+                //insert user input message
                 String msg = text_send.getText().toString();
+                Communication communication = new Communication();
+                generateCommunicationEntity(communication, msg);
+                ahs.insertLogToActivityHistory(communication);
+
+
                 if (!msg.equals("")){
-                mchat.add(new Chat("a", "", msg, 0));
+                    mchat.add(new Chat("a", "", msg, 0));
                     messageAdapter = new MessageAdapter(ChatActivity.this, mchat);
                     recyclerView.setAdapter(messageAdapter);
                 }
-                text_send.setText("");
 
+                String userInput = new String(text_send.getText().toString());
+                text_send.setText("");
+                tempBotMsg = csi.getResponse(userInput);
+                generateCommunicationEntityFromBot(communication, tempBotMsg);
                 new CountDownTimer(3000, 1000){
                     @Override
                     public void onTick(long l) {
@@ -88,13 +111,10 @@ public class ChatActivity extends AppCompatActivity {
 
                     @Override
                     public void onFinish() {
-
-                        mchat.add(new Chat("", userid, "cxczcx", imgid));
                       //  messageAdapter = new MessageAdapter(ChatActivity.this, mchat);
-
+                        mchat.add(new Chat("", userid, tempBotMsg, imgid));
                         messageAdapter.notifyDataSetChanged();
                         //recyclerView.setAdapter(messageAdapter);
-
                     }
                 }.start();
             }
@@ -117,6 +137,22 @@ public class ChatActivity extends AppCompatActivity {
     public View onCreateView(String name, Context context, AttributeSet attrs) {
         return super.onCreateView(name, context, attrs);
 
+    }
+
+    private void generateCommunicationEntity(Communication communication, String message){
+        communication.setRoomId(this.roomId);
+        communication.setUserName(this.userName);
+        communication.setUserId(this.userId);
+        communication.setCreatedDate(new Date());
+        communication.setMessage(message);
+    }
+
+    private void generateCommunicationEntityFromBot(Communication communication, String message){
+        communication.setRoomId(this.roomId);
+        communication.setUserName("Isabelle");
+        communication.setUserId("isabelle");
+        communication.setCreatedDate(new Date());
+        communication.setMessage(message);
     }
 
     private void readMesagges(){

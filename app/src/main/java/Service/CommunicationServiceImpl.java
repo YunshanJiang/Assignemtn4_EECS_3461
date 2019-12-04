@@ -20,17 +20,10 @@ public class CommunicationServiceImpl {
             Matcher m = p.matcher(userInput);
 
             if(m.find())
-                return responseDelay(communicationModel.getResponseMap().get(keyReg));
+                return communicationModel.getResponseMap().get(keyReg);
         }
         return communicationModel.defaultMessageFromBot;
     }
 
-    private String responseDelay(String messageFromBot) {
-        try {
-            Thread.sleep(3000);//3 seconds delay...
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        return messageFromBot;
-    }
+
 }
