@@ -1,16 +1,20 @@
 package com.example.a4chatapp.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.a4chatapp.AddFriendActivity;
 import com.example.a4chatapp.FriendListItem;
 import com.example.a4chatapp.R;
 import com.example.a4chatapp.RecyclerViewAdapter;
@@ -22,7 +26,7 @@ public class pageFragment2 extends Fragment {
     View v;
     private RecyclerView myrecyclerview;
     private List<FriendListItem> friendListItems;
-
+    private ImageButton addNewFriendButton;
 
     public pageFragment2(){
 
@@ -35,6 +39,7 @@ public class pageFragment2 extends Fragment {
         RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(getContext(), friendListItems);
         myrecyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
         myrecyclerview.setAdapter(recyclerViewAdapter);
+
         return rootView;
     }
 
@@ -42,6 +47,9 @@ public class pageFragment2 extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+
         friendListItems = new ArrayList<>();
         friendListItems.add(new FriendListItem("Isabelle", R.drawable.esabelle, 1));
         friendListItems.add(new FriendListItem("Isabelle", R.drawable.esabelle,2));
@@ -50,5 +58,21 @@ public class pageFragment2 extends Fragment {
         friendListItems.add(new FriendListItem("Isabelle", R.drawable.esabelle,5));
         friendListItems.add(new FriendListItem("Isabelle", R.drawable.esabelle,6));
 
+    }
+
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+
+        addNewFriendButton = (ImageButton) getView().findViewById(R.id.imageButton_add_new_friend);
+        addNewFriendButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), AddFriendActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
