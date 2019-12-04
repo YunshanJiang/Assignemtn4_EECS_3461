@@ -8,6 +8,10 @@ public class FriendListItem {
 
     private int status;
     private int roomID;
+
+
+
+    private String randommessage;
     public FriendListItem(){
 
     }
@@ -49,5 +53,11 @@ public class FriendListItem {
     public void setStatus(int status) {
         this.status = status;
     }
+    public String getRandommessage() {
+        return randommessage;
+    }
 
+    public void setRandommessage(String randommessage) {
+        this.randommessage = randommessage;
+    }
 }

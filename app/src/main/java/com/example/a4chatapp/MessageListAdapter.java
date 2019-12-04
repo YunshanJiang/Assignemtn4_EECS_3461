@@ -73,6 +73,9 @@ public void onClick(View view) {
         mCotext.startActivity(intent);
         }
         });
+
+
+        holder.newmessage.setText("do you wanna play overwatch...");
         }
 
 @Override
@@ -85,12 +88,14 @@ public  class MyViewHolder extends RecyclerView.ViewHolder{
     public TextView tv_name;
     public ImageView img;
     public ImageView status_icon;
+    public TextView newmessage;
     public  MyViewHolder(View itemView){
         super(itemView);
         item_contact = (LinearLayout) itemView.findViewById(R.id.message_item_layout);
         tv_name = (TextView) itemView.findViewById(R.id.name_contact);
         img = (ImageView) itemView.findViewById(R.id.img_contect_img);
         status_icon = (ImageView) itemView.findViewById(R.id.status_icon);
+        newmessage = (TextView) itemView.findViewById(R.id.newmessagetext);
     }
 }
 }

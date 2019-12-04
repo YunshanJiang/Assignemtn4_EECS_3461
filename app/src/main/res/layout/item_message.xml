@@ -43,7 +43,8 @@
             android:text="ddddddd"
             android:layout_marginTop="20dp"
             android:textSize="15dp"
-            android:textColor="#4478A7"/>
+            android:textColor="#4478A7"
+            android:id="@+id/newmessagetext"/>
     </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"
