@@ -8,7 +8,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/toplayout">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bar_layout">
 
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/chatToorbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:id="@+id/userIdInChat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginLeft="25dp"
+                        android:text="Profile"
+                        android:textColor="#fff"
+                        android:textSize="18sp"
+                        android:textStyle="bold"></TextView>
+
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,7 +52,7 @@
             android:layout_height="1dp"
             android:layout_gravity="center"
             android:layout_marginTop="50sp"
-            android:background="#a40404" />
+            android:background="#868686" />
 
 
 
@@ -58,7 +84,7 @@
         android:layout_width="match_parent"
         android:layout_height="157dp"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/image" />
+        app:srcCompat="@drawable/profile" />
 
     <TextView
         android:id="@+id/userName"
@@ -87,12 +113,14 @@
             android:layout_height="wrap_content"
             android:text="Set Status"
             android:textAlignment="center"
-            android:textSize="20dp" />
+            android:textSize="15dp" />
 
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="143dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="#868686"
+            />
 
     </LinearLayout>
 
@@ -100,15 +128,15 @@
         android:layout_width="300dp"
         android:layout_height="1dp"
         android:layout_gravity="center"
-        android:layout_marginTop="30sp"
-        android:background="#a40404" />
+        android:layout_marginTop="10sp"
+        android:background="#D3D3D3" />
 
     <TextView
         android:id="@+id/account_setting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:layout_marginTop="20sp"
+        android:layout_marginTop="10sp"
         android:textAlignment="center"
         android:text="Account Settings" />
 
@@ -116,15 +144,15 @@
         android:layout_width="300dp"
         android:layout_height="1dp"
         android:layout_gravity="center"
-        android:layout_marginTop="20sp"
-        android:background="#a40404" />
+        android:layout_marginTop="10sp"
+        android:background="#868686" />
 
     <TextView
         android:id="@+id/app_setting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:layout_marginTop="20sp"
+        android:layout_marginTop="10sp"
         android:textAlignment="center"
         android:text="App Settings" />
 
@@ -132,11 +160,11 @@
         android:layout_width="300dp"
         android:layout_height="1dp"
         android:layout_gravity="center"
-        android:layout_marginTop="20sp"
-        android:background="#a40404" />
+        android:layout_marginTop="10sp"
+        android:background="#868686" />
 
     <TextView
-        android:layout_marginTop="20sp"
+        android:layout_marginTop="10sp"
         android:id="@+id/support"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -149,17 +177,17 @@
         android:layout_height="1dp"
         android:layout_gravity="center"
         android:layout_marginTop="10sp"
-        android:background="#a40404" />
+        android:background="#868686" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="99dp"
+        android:layout_height="70dp"
         android:gravity="center"
         android:orientation="vertical">
 
         <Button
             android:id="@+id/logout_button"
-            android:layout_width="202dp"
+            android:layout_width="90dp"
             android:layout_height="wrap_content"
             android:text="Log out" />
     </LinearLayout>

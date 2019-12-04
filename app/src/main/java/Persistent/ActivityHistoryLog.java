@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class ActivityHistoryLog {
+
     private HashMap<Integer, List<Communication>> activityHistoryLog = new HashMap<Integer, List<Communication>>();
 
     public HashMap<Integer, List<Communication>> getActivityHistoryLog() {
