@@ -15,11 +15,12 @@
             android:id="@+id/chatToorbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:popupTheme="@style/AppTheme.PopupOverlay">
-            <RelativeLayout android:layout_height="match_parent"
+            android:background="#4478A7">
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_marginRight="16dp"
-                >
+                android:layout_height="match_parent"
+                android:layout_marginRight="16dp">
 
                 <TextView
                     android:id="@+id/userIdInChat"
@@ -32,14 +33,14 @@
                     android:textStyle="bold"></TextView>
 
                 <TextView
+                    android:id="@+id/add_friend_button"
                     android:layout_width="60dp"
                     android:layout_height="40dp"
                     android:layout_alignParentRight="true"
                     android:gravity="center"
                     android:text="Save"
-                    android:textSize="20dp"
 
-                    android:id="@+id/add_friend_button"/>
+                    android:textSize="20dp" />
 
             </RelativeLayout>
         </androidx.appcompat.widget.Toolbar>

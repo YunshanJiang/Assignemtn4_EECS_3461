@@ -51,12 +51,12 @@ public class pageFragment2 extends Fragment {
 
 
         friendListItems = new ArrayList<>();
-        friendListItems.add(new FriendListItem("Isabelle", R.drawable.esabelle, 1));
-        friendListItems.add(new FriendListItem("Isabelle", R.drawable.esabelle,2));
-        friendListItems.add(new FriendListItem("Isabelle", R.drawable.esabelle,3));
-        friendListItems.add(new FriendListItem("Isabelle", R.drawable.esabelle,4));
-        friendListItems.add(new FriendListItem("Isabelle", R.drawable.esabelle,5));
-        friendListItems.add(new FriendListItem("Isabelle", R.drawable.esabelle,6));
+        friendListItems.add(new FriendListItem("Jimmyjay", R.drawable.pp1, 1, 1));
+        friendListItems.add(new FriendListItem("Franc010", R.drawable.pp6,2,1));
+        friendListItems.add(new FriendListItem("jellymaca", R.drawable.pp2,3,2));
+        friendListItems.add(new FriendListItem("ck", R.drawable.pp3,4,0));
+        friendListItems.add(new FriendListItem("Yunshan.J", R.drawable.pp4,5,0));
+        friendListItems.add(new FriendListItem("LemonAid", R.drawable.pp5,6,0));
 
     }
 

@@ -68,7 +68,7 @@ public class ChatActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recycler_view_chat);
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
-        //linearLayoutManager.setStackFromEnd(true);
+        linearLayoutManager.setStackFromEnd(true);
         recyclerView.setLayoutManager(linearLayoutManager);
         messageAdapter = new MessageAdapter(ChatActivity.this, mchat);
         recyclerView.setAdapter(messageAdapter);

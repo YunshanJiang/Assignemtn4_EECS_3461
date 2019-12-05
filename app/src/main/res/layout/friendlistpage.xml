@@ -13,7 +13,7 @@
             android:id="@+id/toolbar2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
+            android:background="#5174A8"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme" />
 
@@ -23,17 +23,20 @@
             android:layout_height="wrap_content"
             android:layout_alignTop="@id/toolbar2"
             android:layout_alignParentTop="false"
-            android:layout_centerInParent="true"
-            android:text="Friend"
-            android:textSize="30sp" />
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:text="Friends"
+            android:textSize="30sp"
+            android:textColor="#FFFFFF"/>
 
         <ImageButton
             android:id="@+id/imageButton_add_new_friend"
             android:layout_width="50dp"
             android:layout_height="50dp"
-
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
             android:layout_alignParentRight="true"
-            android:background="@drawable/ic_action_add_people" />
+            android:background="@drawable/component41" />
     </RelativeLayout>
 
 

@@ -15,10 +15,10 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/chatToorbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#4478A7">
             <RelativeLayout android:layout_height="match_parent"
                 android:layout_width="match_parent">
-
                 <TextView
                     android:id="@+id/userIdInChat"
                     android:layout_width="wrap_content"

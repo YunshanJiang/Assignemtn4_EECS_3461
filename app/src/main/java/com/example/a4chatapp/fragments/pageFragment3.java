@@ -43,9 +43,10 @@ public class pageFragment3 extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         discoveryList = new ArrayList<>();
-        discoveryList.add(new Discovery("isabelle", R.drawable.hearthstone,"https://playhearthstone.com" ));
-        discoveryList.add(new Discovery("isabelle", R.drawable.hearthstone, "https://playhearthstone.com"));
-        discoveryList.add(new Discovery("isabelle", R.drawable.hearthstone, "https://playhearthstone.com"));
+        discoveryList.add(new Discovery("Look at these cows wearing VR headsets",
+                "Russian farmers are allegedly experimenting with virtual reality for cows in order to improve milk production. ", R.drawable.milkcow,"https://www.pcgamer.com/look-at-these-cows-wearing-vr-headsets/" ));
+        discoveryList.add(new Discovery("No Man's Sky update will let players increase ship inventory and permanently edit terrain","The Synthesis Update arrives this week with hundreds of changes for No Man's Sky.", R.drawable.nomanssky, " https://www.pcgamer.com/no-mans-sky-synthesis-update"));
+        discoveryList.add(new Discovery("Hearthsone","check the new release of hearhstone!", R.drawable.hearthstone, "https://playhearthstone.com"));
 
 
     }

@@ -42,6 +42,7 @@ public class MessageActivity extends AppCompatActivity {
         pagerAdapter = new SlidePagerAdapter(getSupportFragmentManager(),list);
         pager.setAdapter(pagerAdapter);
         messageButton = (ImageButton)findViewById(R.id.imageButton);
+        messageButton.setBackgroundResource(R.drawable.clickedmesage);
         friendListButton = (ImageButton)findViewById(R.id.imageButton2);
         activityButton = (ImageButton)findViewById(R.id.imageButton3);
         profileButton = (ImageButton)findViewById(R.id.imageButton4);
@@ -49,6 +50,10 @@ public class MessageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 pager.setCurrentItem(0, false);
+                messageButton.setBackgroundResource(R.drawable.clickedmesage);
+                friendListButton.setBackgroundResource(R.drawable.component61);
+                activityButton.setBackgroundResource(R.drawable.group46);
+                profileButton.setBackgroundResource(R.drawable.ppmain2);
             }
         });
 
@@ -56,18 +61,31 @@ public class MessageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 pager.setCurrentItem(1, false);
+                messageButton.setBackgroundResource(R.drawable.component51);
+                friendListButton.setBackgroundResource(R.drawable.clickedfrind);
+                activityButton.setBackgroundResource(R.drawable.group46);
+                profileButton.setBackgroundResource(R.drawable.ppmain2);
             }
         });
         activityButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 pager.setCurrentItem(2, false);
+                messageButton.setBackgroundResource(R.drawable.component51);
+                friendListButton.setBackgroundResource(R.drawable.component61);
+                activityButton.setBackgroundResource(R.drawable.clickeddiscover);
+                profileButton.setBackgroundResource(R.drawable.ppmain2);
+
             }
         });
         profileButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 pager.setCurrentItem(3, false);
+                messageButton.setBackgroundResource(R.drawable.component51);
+                friendListButton.setBackgroundResource(R.drawable.component61);
+                activityButton.setBackgroundResource(R.drawable.group46);
+                profileButton.setBackgroundResource(R.drawable.ppmain);
             }
         });
     }

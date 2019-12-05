@@ -17,7 +17,7 @@
             android:id="@+id/chatToorbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            >
+            android:background="#4478A7">
 
             <RelativeLayout
                 android:layout_width="match_parent"

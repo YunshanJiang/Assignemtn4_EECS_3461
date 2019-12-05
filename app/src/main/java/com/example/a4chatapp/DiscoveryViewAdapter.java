@@ -44,6 +44,7 @@ public class DiscoveryViewAdapter extends RecyclerView.Adapter<DiscoveryViewAdap
     @Override
     public void onBindViewHolder(@NonNull DiscoveryViewAdapter.MyViewHolder holder, int position) {
         final Discovery discovery = mNews.get(position);
+        holder.discovery_text_title.setText(mNews.get(position).getDestitle());
         holder.discovery_text.setText(mNews.get(position).getDescription());
         holder.discovery_image.setImageResource(mNews.get(position).getPhoto());
         holder.itemView.setOnClickListener(new View.OnClickListener(){
@@ -64,9 +65,10 @@ public class DiscoveryViewAdapter extends RecyclerView.Adapter<DiscoveryViewAdap
         public LinearLayout discovery_block;
         public TextView discovery_text;
         public ImageView discovery_image;
-
+        public TextView discovery_text_title;
         public  MyViewHolder(View itemView){
             super(itemView);
+            discovery_text_title = (TextView) itemView.findViewById(R.id.discovery_text_title);
             discovery_block = (LinearLayout) itemView.findViewById(R.id.discovery_block);
             discovery_text = (TextView) itemView.findViewById(R.id.discovery_text);
             discovery_image = (ImageView) itemView.findViewById(R.id.discovery_image);
